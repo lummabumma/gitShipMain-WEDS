@@ -121,6 +121,9 @@ void init(){
   healthbar.checksum = unbinary(new String(p));
   //dialogue
   person = new Person();
+  char[] q = binary(healthbar.checksum).toCharArray();
+  q[q.length - 7] = '1';
+  healthbar.checksum = unbinary(new String(q));
   //junk
   junk = new Junk();
   
